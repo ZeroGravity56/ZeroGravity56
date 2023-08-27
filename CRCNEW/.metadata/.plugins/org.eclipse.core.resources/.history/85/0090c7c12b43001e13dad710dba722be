@@ -1,0 +1,519 @@
+package steps;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
+
+import pageobjects.CRCHP;
+import utils.TU;
+
+
+public class CRCHPSteps extends CRCHP{
+	
+	SimpleDateFormat dt, dt1;
+	long startTime;
+    TU tu;
+    String fromDt, toDt, Cdt;
+    int i, itemsSize, textsSize, pieItemsSize, advSize, hisPayAmtSize;
+    
+    public CRCHPSteps(){
+		super(driver);
+		tu = new TU();
+	}
+    
+    
+    public void navigateToCRC() throws InterruptedException {
+    	tu.webAppObject(driver, omLink, "click", "", 1, "CRC", "omLink", 1);
+    	tu.webAppObject(driver, crcLink, "click", "", 1, "CRC", "crcLink", 1);
+    }
+    
+    public void verifyinprogress() throws InterruptedException {
+    	Thread.sleep(5000);
+    	inprogress.click();
+    }
+    
+    public void navigatetobalanceforwardvalue() throws InterruptedException {
+    	Thread.sleep(5000);
+    	balancevalue.click();
+    }
+    
+    public void verifybalanceforward() throws InterruptedException {
+    	Thread.sleep(5000);
+    	balanceforward.click();
+    }
+    
+    public void verifyrepid() throws InterruptedException {
+    	Thread.sleep(5000);
+    	RepId.click();
+    }
+    
+    public void verifybranchid() throws InterruptedException {
+    	Thread.sleep(5000);
+    	BranchId.click();
+    }
+    
+    public void verifyrepname() throws InterruptedException {
+    	Thread.sleep(5000);
+    	RepName.click();
+    }
+    
+    public void navigatetoexportcsv() throws InterruptedException {
+    	Thread.sleep(5000);
+    	ExportToCSV.click();
+    }
+    
+    public void verifydealerconcession() throws InterruptedException {
+    	Thread.sleep(5000);
+    	DealerConcession.click();
+    }
+    
+    public void verifystatementdate() throws InterruptedException {
+    	Thread.sleep(5000);
+    	StatementDate.click();
+    }
+    
+    public void verifycommissionoverrides() throws InterruptedException {
+    	Thread.sleep(5000);
+    	CommissionsOverrides.click();
+    }
+    
+    public void verifyadjtaxable() throws InterruptedException {
+    	Thread.sleep(5000);
+    	AdjTaxable.click();
+    }
+    
+    public void verifynonadjtaxable() throws InterruptedException {
+    	Thread.sleep(5000);
+    	NonAdjTaxable.click();
+    }
+    
+    public void verifyclosingbalance() throws InterruptedException {
+    	Thread.sleep(5000);
+    	ClosingBalance.click();
+    }
+    
+    public void verifypayableamount() throws InterruptedException {
+    	Thread.sleep(5000);
+    	Payableamount.click();
+    }
+    
+    public void navigatetovalueforgrouppending() throws InterruptedException {
+    	Thread.sleep(5000);
+    	ValueforGroupPendingEarning.click();
+    }
+    
+    public void navigatetovalueofbalanceforward() throws InterruptedException {
+    	Thread.sleep(5000);
+    	ValueofBalanceForward.click();
+    }
+    
+    public void navigatetofirstvalueofcommissions() throws InterruptedException {
+    	Thread.sleep(5000);
+    	FirstValueofCommissionsOverrides.click();
+    }
+    
+    public void navigatetosecondvalueofcommissions() throws InterruptedException {
+    	Thread.sleep(5000);
+    	SecondValueofCommissionsOverrides.click();
+    }
+    
+    public void navigatetothirdvalueofcommissions() throws InterruptedException {
+    	Thread.sleep(5000);
+    	ThirdValueofCommissionsOverrides.click();
+    }
+    
+    public void navigatetofirstadjtaxable() throws InterruptedException {
+    	Thread.sleep(5000);
+    	FirstValueofAdjTaxable.click();
+    }
+    
+    public void navigatetosecondadjtaxable() throws InterruptedException {
+    	Thread.sleep(5000);
+    	SecondValueofAdjTaxable.click();
+    }
+    
+    public void navigatetovalueformypendingearnings() throws InterruptedException {
+    	Thread.sleep(5000);
+    	ValueForMyPendingEarning.click();
+    }
+    
+    public void navigatetovalueforgroupestimatedpayment() throws InterruptedException {
+    	Thread.sleep(5000);
+    	ValueForGroupEstimatedPayment.click();
+    }
+    
+    public void verifygrouppendingearnings() throws InterruptedException {
+    	Thread.sleep(5000);
+    	grouppendingearnings.click();
+    }
+    
+    public void verifygroupoffcycle() throws InterruptedException {
+    	Thread.sleep(5000);
+    	groupoffcycle.click();
+    }
+    
+    public void verifymypendingearning() throws InterruptedException {
+    	Thread.sleep(5000);
+    	mypendingearnings.click();
+    }
+    
+    public void verifygroupestimated() throws InterruptedException {
+    	Thread.sleep(5000);
+    	groupestimated.click();
+    }
+    
+    public void verifyLOBSnPYLOBS(String repCode) throws InterruptedException, IOException, ParseException  {
+    /*	//Mahesh changed all CRC to ERK on May 11th
+    	if(excelRead("Testdata",Testcaseid,"OfficeType").equals("FO")) {
+    		tu.webAppObject(driver, advDD, "click", "", 1, "GAJ", "advDD", 1);
+        	Thread.sleep(4000);
+        	advSize = advisor.size();
+        	/*for(i=0;i<advSize;i++) {
+        		if(advisor.get(i).getText().contains(repCode)) {
+        			
+        			tu.webAppObject(driver, advisor.get(i), "click", "", 4, "ERK", "advisor "+repCode, 1);
+        			System.out.println("If**************************************************");
+        			break;
+        		}
+        	}
+        	//driver.findElement(By.xpath("//div[text()='ERK - ADAMEC,SEAN']")).click();
+			driver.findElement(By.xpath("//div[text()='GAJ - ARTHUR,SANDRA']")).click();
+        	tu.webAppObject(driver, selectBtn, "click", "", 1, "GAJ", "selectBtn", 1);
+		}else if(excelRead("Testdata",Testcaseid,"OfficeType").equals("BO")) {
+			tu.webAppObject(driver, cmbCommissionRepList, "sendKeys", repCode, 1, "GAJ", "cmbCommissionRepList", 1);
+	    	Thread.sleep(1000);
+	    	tu.webAppObject(driver, cmbCommissionRepList, "sendKeys", ""+Keys.ENTER, 1, "GAJ", "cmbCommissionRepList", 1);
+	    	tu.webAppObject(driver, searchBtn, "click", "", 1, "GAJ", "searchBtn", 1);
+	    	if(tu.webAppObject(driver, okBtn, "verify", "", 5, "GAJ", "okBtn", 1).equals("true")) {
+	    		tu.webAppObject(driver, okBtn, "click", "", 1, "GAJ", "okBtn", 1);
+	    	}
+		}*/
+    	
+    	tu.webAppObject(driver, dateSelectionDD, "click", "", 1, "GAJ", "dateSelectionDD", 1);
+    	Thread.sleep(3000);
+    	assertThat("Current Date Radio Button is not displayed. ", currentDate.isDisplayed());
+    	assertThat("YTD Radio Button is not displayed. ", ytd.isDisplayed());
+    	assertThat("Prior Year Radio Button is not displayed. ", priorYear.isDisplayed());
+    	assertThat("Custom Radio Button is not displayed. ", custom.isDisplayed());
+    	assertThat("1109 Year Radio Button is not displayed. ", one109Year.isDisplayed());
+    	tu.webAppObject(driver, priorYear, "click", "", 1, "GAJ", "priorYear", 1);
+    	
+    	tu.webAppObject(driver, refreshBtn, "click", "", 1, "CRC", "refreshBtn", 1);
+    	Thread.sleep(2000);
+    	
+    	/*fromDt = tu.webAppObject(driver, fromDate, "getAttribute", "value", 1, "CRC", "fromDate", 1); 
+    	toDt = tu.webAppObject(driver, toDate, "getAttribute", "value", 1, "CRC", "toDate", 1);
+    	tu.webAppObject(driver, refreshBtn, "click", "", 1, "CRC", "refreshBtn", 1);
+    	
+    	
+    	System.out.println("**************************************************************************************");
+    	//Line Of Business Summary
+    	tu.waitForPageLoad();
+    	Thread.sleep(4000);
+    	assertThat("LOB Summary Element is not displayed. ", lobSumm.isDisplayed());
+    	assertThat("LOB Summary Date is not displayed. ", lobSummDate.isDisplayed());
+    	//01/01/2019 - 12/31/2019
+    	assertThat("LOB Summary Date is incorrect. Actual Date: "+lobSummDate.getText()+". Filter Date: "+fromDt+" - "+toDt, lobSummDate.getText().equals(fromDt+" - "+toDt));
+    	itemsSize = lobItems.size();
+    	for(i=0;i<itemsSize;i++) {
+    		assertThat("LOB Item "+lobItems.get(i).getText()+" is not displayed. ", lobItems.get(i).isDisplayed());
+    	}
+    	textsSize = lobTexts.size();
+    	for(i=0;i<textsSize;i++) {
+    		assertThat("LOB Text "+lobTexts.get(i).getText()+" is not displayed. ", lobTexts.get(i).isDisplayed());
+    	}*/
+    	pieItemsSize = pieItems.size();
+    	System.out.println("SIZE "+pieItemsSize);
+    	for(i=0;i<(pieItemsSize-1);i++) {
+    		assertThat("Pie Item "+pieItems.get(i).getText()+" is not displayed. ", pieItems.get(i).isDisplayed());
+    	}
+    	System.out.println("Line Of Business Summary**************************************************************************************");
+    	
+    	//**************************************************************************************
+    	//Prior Year Line Of Business Summary
+    	
+    	assertThat("Prior Year LOB Summary Element is not displayed. ", pylobSumm.isDisplayed());
+    	assertThat("Prior Year LOB Summary Date is not displayed. ", pylobSummDate.isDisplayed());
+    	//assertThat("Prior Year LOB Summary Date is incorrect. ", pylobSummDate.getText().equals(fromDt+" - "+toDt));
+    	itemsSize = pylobItems.size();
+    	for(i=0;i<itemsSize;i++) {
+    		assertThat("Prior Year LOB Item "+pylobItems.get(i).getText()+" is not displayed. ", pylobItems.get(i).isDisplayed());
+    	}
+    	textsSize = pylobTexts.size();
+    	for(i=0;i<textsSize;i++) {
+    		assertThat("Prior Year LOB Text "+pylobTexts.get(i).getText()+" is not displayed. ", pylobTexts.get(i).isDisplayed());
+    	}
+    	pieItemsSize = pyPieItems.size();
+    	for(i=0;i<pieItemsSize;i++) {
+    		assertThat("Prior Year Pie Item "+pyPieItems.get(i).getText()+" is not displayed. ", pyPieItems.get(i).isDisplayed());
+    	}
+    	
+    }
+    
+    public void verifyPDCR() throws InterruptedException, IOException, ParseException  {
+    	
+    	//***************************************************************************************
+    	//Pre-Defined Commission Reports
+    	
+    	new Actions(driver).moveToElement(pdCommReports).perform();
+    	Thread.sleep(5000);
+    	assertThat("Asset/Transaction Based Report is not displayed. ", atbReport.isDisplayed());
+    	assertThat("Adjustment Report is not displayed. ", adjReport.isDisplayed());
+    	assertThat("Completed Revenue Report is not displayed. ", crReport.isDisplayed());
+    	assertThat("Commission Comparison Report is not displayed. ", ccReport.isDisplayed());
+    	assertThat("Direct Deposit Report is not displayed. ", ddReport.isDisplayed());
+    	//assertThat("Pershing Advisory Account is not displayed. ", paAcc.isDisplayed());
+    	assertThat("Line of Business Report is not displayed. ", lobReport.isDisplayed());
+    	assertThat("Line of Business / 1099 is not displayed. ", lob1099.isDisplayed());
+    	assertThat("Override Revenue Report is not displayed. ", orReport.isDisplayed());
+    	System.out.println("**************************************************************************************");
+    	if(excelRead("Testdata",Testcaseid,"OfficeType").equals("FO")) {
+    		assertThat("Payout Report is not displayed. ", pReport.isDisplayed());
+    		System.out.println("if**************************************************************************************");
+		}else if(excelRead("Testdata",Testcaseid,"OfficeType").equals("BO")) {
+			assertThat("Cyclical Bonus Payment is not displayed. ", cbReport.isDisplayed());
+	    	assertThat("Back Office Payout Report is not displayed. ", boReport.isDisplayed());
+	    	assertThat("Front Office Payout Report is not displayed. ", foReport.isDisplayed());
+	    	System.out.println("if**************************************************************************************");
+		}
+    	assertThat("Practice Analysis Report is not displayed. ", paReport.isDisplayed());
+    	assertThat("Production Summary Report is not displayed. ", psReport.isDisplayed());
+    	assertThat("Revenue Detail Report is not displayed. ", rdReport.isDisplayed());
+    	assertThat("Revenue Payment Summary Report is not displayed. ", rpsReport.isDisplayed());
+    	assertThat("Trail Report is not displayed. ", tReport.isDisplayed());
+    	assertThat("Estimated Unearned Fees is not displayed. ", eufReport.isDisplayed());
+    	
+    }
+    
+    public void verifyCS() throws InterruptedException, IOException, ParseException  {
+    	
+    	//***************************************************************************************
+    	
+    	tu.webAppObject(driver, commStmts, "click", "", 1, "CRC", "commStmts", 1);
+    	tu.waitForPageLoad();
+    	assertThat("Commission Statements Page is not displayed. ", Cdate.isDisplayed());
+    	
+//    	Cdt = tu.webAppObject(driver, Cdate, "getAttribute", "value", 1, "CRC", "Cdate", 1);
+//    	dt = new SimpleDateFormat("MMMM dd, yyyy");
+//        Date date = dt.parse(Cdt);
+//        dt1 = new SimpleDateFormat("MM-dd-yyyy");
+//    	tu.webAppObject(driver, chkBox1PY, "click", "", 2, "CRC", "chkBox1PY", 1);
+//    	tu.webAppObject(driver, genStmtBtn, "click", "", 2, "CRC", "genStmtBtn", 1);
+//    	tu.switchToTab(1);
+//    	tu.waitForPageLoad();
+//    	//assertThat("CommissionStatementsCS Page Title is incorrect. Page Title: "+driver.getTitle(), driver.getTitle().contains("CommissionStatementsCS_"+dt1.format(date)));
+//    	assertThat("Commission Statements PDF URL is incorrect. URL: "+driver.getCurrentUrl(), driver.getCurrentUrl().contains("https://agqa.v2020.com/Vision2020_Temp/Reports2/CommissionStatements/CommissionStatementsCS_"+dt1.format(date)));
+    	
+    }
+    
+    //*********************************************************************************
+    
+    // Affirm Application//
+    
+    public void navigatetoofficemanagement() throws InterruptedException {
+    	Thread.sleep(5000);
+    	officeManagement.click();
+    }
+    
+    public void navigatetoaffirmsystem() throws InterruptedException {
+    	Thread.sleep(5000);
+    	affirmSystem.click();
+    }
+    
+    public void navigatetodropdown() throws InterruptedException {
+    	Thread.sleep(5000);
+    	dropdown.click();
+    }
+    
+    public void navigatetobapilot() throws InterruptedException {
+    	Thread.sleep(5000);
+    	baPilot.click();
+    }
+    
+    public void navigatetoba() throws InterruptedException {
+    	Thread.sleep(5000);
+    	ba.click();
+    } 
+    
+    public void navigatetoapprover() throws InterruptedException {
+    	Thread.sleep(5000);
+    	approver.click();
+    } 
+    
+    public void selectRepname() throws InterruptedException {
+    	try{
+    		Thread.sleep(5000);
+    		repNamedropdown.click();
+    		repNamesel.click();
+    	}
+    	catch(Exception e){
+    		String a=user.getText();
+    		System.out.println("Report Name =" + a);
+    		
+    	}
+    	
+    }
+    
+    public void verifyCRCText() {
+    	String text= txtCRC.getText();
+    	System.out.println("CRC Page Header is : "+text);
+    	assertThat("Commission Report Center is not displayed", (text.contains("Commission Report Center")));
+    }
+    
+    public void searchRepCode(String repCode) throws IOException, InterruptedException {
+    	
+    	if(excelRead("Testdata",Testcaseid,"OfficeType").equals("FO")) {
+    		tu.webAppObject(driver, advDD, "click", "", 1, "GAJ", "advDD", 1);
+        	Thread.sleep(4000);
+        	advSize = advisor.size();
+        	
+        	//Added
+        	if(excelRead("Testdata",Testcaseid,"Env").equals("QA"))
+        	
+        		driver.findElement(By.xpath("//div[text()='"+repCode+"']")).click();
+        	/*for(i=0;i<advSize;i++) {
+        		if(advisor.get(i).getText().contains(repCode)) {
+        			
+        			tu.webAppObject(driver, advisor.get(i), "click", "", 4, "ERK", "advisor "+repCode, 1);
+        			System.out.println("If**************************************************");
+        			break;
+        		}
+        	}*/
+        	//driver.findElement(By.xpath("//div[text()='ERK - ADAMEC,SEAN']")).click();
+//			driver.findElement(By.xpath("//div[text()='GAJ - ARTHUR,SANDRA']")).click();
+        	tu.webAppObject(driver, selectBtn, "click", "", 1, "GAJ", "selectBtn", 1);
+		}else if(excelRead("Testdata",Testcaseid,"OfficeType").equals("BO")) {
+			tu.webAppObject(driver, cmbCommissionRepList, "sendKeys", repCode, 1, "GAJ", "cmbCommissionRepList", 1);
+	    	Thread.sleep(500);
+	    	tu.webAppObject(driver, cmbCommissionRepList, "sendKeys", ""+Keys.ENTER, 1, "GAJ", "cmbCommissionRepList", 1);
+	    	tu.webAppObject(driver, searchBtn, "click", "", 1, "GAJ", "searchBtn", 1);
+	    	Thread.sleep(2000);
+	    	if(tu.webAppObject(driver, okBtn, "verify", "", 5, "GAJ", "okBtn", 1).equals("true")) {
+	    		tu.webAppObject(driver, okBtn, "click", "", 1, "GAJ", "okBtn", 1);
+	    	}
+		}
+    }
+    
+    public void verifyPYLOBSummery() throws InterruptedException {
+    	Thread.sleep(1000);
+    	//**************************************************************************************
+    	//Prior Year Line Of Business Summary
+    	System.out.println("Prior Year Line Of Business Summary******************************");
+    	assertThat("Prior Year LOB Summary Element is not displayed. ", pylobSumm.isDisplayed());
+    	assertThat("Prior Year LOB Summary Date is not displayed. ", pylobSummDate.isDisplayed());
+    	itemsSize = pylobItems.size();
+    	for(i=0;i<itemsSize;i++) {
+    		assertThat("Prior Year LOB Item "+pylobItems.get(i).getText()+" is not displayed. ", pylobItems.get(i).isDisplayed());
+    	}
+    	textsSize = pylobTexts.size();
+    	for(i=0;i<textsSize;i++) {
+    		assertThat("Prior Year LOB Text "+pylobTexts.get(i).getText()+" is not displayed. ", pylobTexts.get(i).isDisplayed());
+    	}
+    	pieItemsSize = pyPieItems.size();
+    	for(i=0;i<pieItemsSize;i++) {
+    		assertThat("Prior Year Pie Item "+pyPieItems.get(i).getText()+" is not displayed. ", pyPieItems.get(i).isDisplayed());
+    	}	
+    	
+    }
+    
+    public void selectDate() throws InterruptedException, ParseException {
+    	
+    	tu.webAppObject(driver, dateSelectionDD, "click", "", 1, "GAJ", "dateSelectionDD", 1);
+    	Thread.sleep(1000);
+    	assertThat("Current Date Radio Button is not displayed. ", currentDate.isDisplayed());
+    	assertThat("YTD Radio Button is not displayed. ", ytd.isDisplayed());
+    	assertThat("Prior Year Radio Button is not displayed. ", priorYear.isDisplayed());
+    	assertThat("Custom Radio Button is not displayed. ", custom.isDisplayed());
+    	assertThat("1109 Year Radio Button is not displayed. ", one109Year.isDisplayed());
+    	
+    	LocalDate today = LocalDate.now();
+      	LocalDate yr = today.minusYears(3);
+      	String previousyears = yr.toString();
+      	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+      	SimpleDateFormat output = new SimpleDateFormat("MM/dd/yyyy");
+      	Date Date = sdf.parse(previousyears);
+     	String previousDate = output.format(Date);
+     	System.out.println("From date: "+previousDate);
+     	fromDate.clear();
+    	fromDt = tu.webAppObject(driver, fromDate, "sendKeys", previousDate, 1, "CRC", "fromDate", 1); 
+    	//toDt = tu.webAppObject(driver, toDate, "getAttribute", "value", 1, "CRC", "toDate", 1);
+    	tu.webAppObject(driver, refreshBtn, "click", "", 1, "CRC", "refreshBtn", 1);
+    	Thread.sleep(2000);
+    	
+    }
+    
+    public void verifyLOBSummary() throws InterruptedException {
+    	Thread.sleep(2000);
+    	//Line Of Business Summary
+    	System.out.println("Line Of Business Summary***************************************");
+    	assertThat("LOB Summary Element is not displayed. ", lobSumm.isDisplayed());
+    	assertThat("LOB Summary Date is not displayed. ", lobSummDate.isDisplayed());
+    	itemsSize = lobItems.size();
+    	for(i=0;i<itemsSize;i++) {
+    		assertThat("LOB Item "+lobItems.get(i).getText()+" is not displayed. ", lobItems.get(i).isDisplayed());
+    	}
+    	textsSize = lobTexts.size();
+    	for(i=0;i<textsSize;i++) {
+    		assertThat("LOB Text "+lobTexts.get(i).getText()+" is not displayed. ", lobTexts.get(i).isDisplayed());
+    	}
+    	pieItemsSize = pieItems.size();
+    	for(i=0;i<pieItemsSize;i++) {
+    		assertThat("Pie Item "+pieItems.get(i).getText()+" is not displayed. ", pieItems.get(i).isDisplayed());
+    	}
+    	
+    	
+    }
+    
+    public void verifyCommiHistoryPaymentAmount() throws InterruptedException {
+    	Thread.sleep(2000);
+    	hisPayAmtSize = comHisPaymentAmt.size();
+    	System.out.println("size  ... "+hisPayAmtSize);
+    	Thread.sleep(1000);
+    	for(i=0;i<hisPayAmtSize;i++) {
+    		assertThat("Payment Amount "+comHisPaymentAmt.get(i).getText()+" is not displayed. ", comHisPaymentAmt.get(i).isDisplayed());
+    		comHisPaymentAmt.get(i).click();
+    		Thread.sleep(500);
+    		clsPayAmt.click();
+    		Thread.sleep(500);
+    	}
+    }
+    
+    public void clickBalanceForwadAmount() throws InterruptedException {
+    	Thread.sleep(1500);
+    	BalanceFwdIP.click();
+    }
+    
+    public void verifyBalanceForwardTable() throws InterruptedException {
+    	Thread.sleep(1500);
+    	int col = balFwdClmDetails.size();
+System.out.println("Size of columns : "+ col);
+    	for(int i =0;i<col;i++)
+    	{
+    		System.out.println("Column Names: "+ balFwdClmDetails.get(i).getText());
+    	
+    	}	
+    	Thread.sleep(500);
+    	clsBalFwd.click();
+    }
+    
+    public void balanceFwdCSVReport() throws InterruptedException {
+    	Thread.sleep(500);
+    	balFwdExporttoCSV.click();
+    	Thread.sleep(500);
+    	clsBalFwd.click();
+    }
+    public void clickPDFdoc() throws InterruptedException {
+    	Thread.sleep(1500);
+    	pdfDoc.click();
+    }
+    } 
+    
+    

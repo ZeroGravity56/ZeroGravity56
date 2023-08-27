@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1692956988602" stop="1692957030204" version="1.5.2" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Survaeillance_FO_QA</name>
+    <description type="text">In order to access Survaeillence for Advisor Portal&#13;
+As an Advisor&#13;
+I want to validate all flows in Survaeillence for Advisor Portal</description>
+    <test-cases>
+        <test-case start="1692956988626" stop="1692957030197" status="passed">
+            <name>TC0030_BO_QA-Verify Survaeillance Link.</name>
+            <title>TC0030_BO_QA-Verify Survaeillance Link.</title>
+            <description type="text"></description>
+            <steps>
+                <step start="1692956994093" stop="1692956999928" status="passed">
+                    <name>Given Login to AP</name>
+                    <title>Given Login to AP</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1692956999928" stop="1692957002639" status="passed">
+                    <name>When User navigates to Backoffice</name>
+                    <title>When User navigates to Backoffice</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1692957002639" stop="1692957009704" status="passed">
+                    <name>When User navigates to Surveillance</name>
+                    <title>When User navigates to Surveillance</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1692957009704" stop="1692957014068" status="passed">
+                    <name>And User is on Home Page</name>
+                    <title>And User is on Home Page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1692957014068" stop="1692957018377" status="passed">
+                    <name>And User Select the Review Number dropdown</name>
+                    <title>And User Select the Review Number dropdown</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1692957018377" stop="1692957025061" status="passed">
+                    <name>And User search the Review Number</name>
+                    <title>And User search the Review Number</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1692957025062" stop="1692957027381" status="passed">
+                    <name>And User clicks on view tab.</name>
+                    <title>And User clicks on view tab.</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="attachment0" source="cbd7bb37-1470-4677-92be-d5f295b2940d-attachment.png" type="image/png"/>
+            </attachments>
+            <labels>
+                <label name="story" value="TC0030_BO_QA-Verify Survaeillance Link."/>
+                <label name="feature" value="Survaeillance_FO_QA"/>
+                <label name="host" value="pw1etsquas022bv"/>
+                <label name="thread" value="15236@pw1etsquas022bv.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="feature" value="Survaeillance_FO_QA"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

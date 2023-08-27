@@ -1,0 +1,49 @@
+package pageobjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import utils.TestBase;
+
+public class Survaellience extends TestBase {
+	
+	public Survaellience(WebDriver driver) {
+    	TestBase.driver=driver;
+		PageFactory.initElements(driver, this);
+		
+	}
+	
+		@FindBy(xpath="//a[text()='Surveillance']")
+	    public WebElement surveillanceLink;
+		
+		@FindBy(xpath="//span[text()='BackOffice']/parent::a")
+	    public WebElement backOfficeLink;
+		
+		@FindBy(xpath="//a[@title='Home']")
+	    public WebElement HomeTab;
+				
+		@FindBy(xpath="//*[@id='custom btndropdownSearch ng-tns-c180-9 ng-select ng-select-single ng-pristine ng-valid ng-select-bottom ng-touched']")
+		public WebElement AccountNumberDropdown;
+		
+		@FindBy(xpath="//*[@id='openReviews']")
+		public WebElement OpenReviewsDetailsPage;
+		
+		@FindBy(xpath="//*[@id='my-drafts']")
+		public WebElement MyDraftsDetailsPage;
+		
+		@FindBy(xpath="//*[@id='myreviews']")
+		public WebElement OpenMyReviewsDetailsPage;
+		
+		@FindBy(xpath="//*[@id='escalated']")
+		public WebElement OpenEscalatedDetailsPage;
+		
+		@FindBy(xpath="//*[@id='All']")
+		public WebElement OpenAllPage;
+	
+		@FindBy(id="New")
+	    public WebElement New;
+		
+		
+    }

@@ -1,0 +1,448 @@
+package stepdefinitions;
+
+import java.io.IOException;
+import java.text.ParseException;
+import org.junit.Assert;
+
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import steps.*;
+import utils.TU;
+import utils.TestBase;
+
+public class SAHomeStepDefination extends TestBase{
+
+	TU tu;
+	CRCHPSteps crcHP = new CRCHPSteps();
+	
+	AGFOLPSteps foLP = new AGFOLPSteps();
+	SurvaellianceAutomationSteps surv = new SurvaellianceAutomationSteps();
+	
+	public void SAStepDefination() {
+		tu = new TU();
+	}
+	
+	@Given("^Login to AP$")
+    public void APLogin() throws Throwable  {
+		if(excelRead("Testdata",Testcaseid,"OfficeType").equals("FO")) {
+			driver.get(excelRead("URLs",excelRead("Testdata",Testcaseid,"Env"),"foURL"));
+			driver.manage().window().maximize();
+			foLP.login(excelRead("Testdata",Testcaseid,"foUsername"), excelRead("Testdata",Testcaseid,"foPassword"));
+		}else if(excelRead("Testdata",Testcaseid,"OfficeType").equals("BO")) {
+			driver.get("http://"+excelRead("Testdata",Testcaseid,"boUsername")+":"+excelRead("Testdata",Testcaseid,"boPassword")+excelRead("URLs", excelRead("Testdata", Testcaseid,"Env"),"boURL"));
+			driver.manage().window().maximize();
+//			System.out.println("Testcase ID"+ Testcaseid);
+			
+		}
+		
+    }
+	
+	
+		
+	  
+		
+				*/
+	
+/*	@When("^User login as Supervisor Role")
+	public void loginasSupervisorRole() throws InterruptedException
+	{
+		surv.loginasSupervisorRole();
+	}
+			
+		@When("^User navigates to Surveillance$")
+		public void navigateToSurveillance() throws InterruptedException
+		{
+			surv.navigateToSurveillancelink();
+		}
+		
+		@And("^ User Verify Homepage for LHS sub menu items with expand and collapse function$")
+		public void verifyHomepageLHSSubmenu() throws InterruptedException
+		{
+			surv.clickOnHomeTab();
+			
+		}
+		
+		@Then("^ User Verify Dropdown Account number with search functions.")
+		public void verifyDropdownAccountNumber() throws InterruptedException
+		{
+			surv.verifyDropdownAccountNumber();
+			surv.ReviewNumberDropdown();
+			surv.ClientNameDropdown();
+			surv.RepCodeDropdown();
+			
+			
+		}
+	  	
+		@And("^ User verify Open review with review details display on click.")
+		public void OpenReviewDetailsPage() throws InterruptedException
+		{
+			surv.OpenReviewDetailsPage();
+		}
+		
+
+		@And("^ User verify My Draft with review details display on click.")
+		public void verifyMyDraftDetailsPage() throws InterruptedException
+		{
+			surv.OpenMyDraftDetailsPage();
+		}
+		
+		@And("^ User verify My Review with review details display on click.")
+		public void verifyMyReviewDetailsPage() throws InterruptedException
+		{
+			surv.OpenMyReviewDetailsPage();
+		}
+		
+		@And("^ User verify Escalated with review details display on click.")
+		public void verifyEscalatedDetailsPage() throws InterruptedException
+		{
+			surv.verifyEscalatedDetailsPage();
+		}
+		
+		@And("^ User verify All with review details display on click.")
+		public void verifyAllPage() throws InterruptedException
+		{
+			surv.verifyAllPage();
+		}
+		
+		@And("^User verify Functionality of +New.")
+		public void verifyNewTabOnClick() throws InterruptedException
+		{
+			surv.verifyNewTabOnClick();
+		}
+		 
+		@And("^User verify Functionality of Import")
+		public void verifyImportTabOnClick() throws InterruptedException
+		{
+			surv.verifyImportTabOnClick();
+		}
+		
+
+		@And("^User verify Functionality of Clear All.")
+		public void verifyClearAllTabOnClick() throws InterruptedException
+		{
+			surv.verifyClearAllTabOnClick();
+		}
+		
+		@And("^User Download excel and Pagination with traversing last record and backwards.")
+		public void downloadExcelPagination() throws InterruptedException
+		{
+			surv.downloadExcelPagination();
+		}
+		
+		@Then("^User Verify Review Name.")
+		public void verifyReviewName() throws InterruptedException
+		{
+			surv.verifyReviewName();
+		}
+		
+	  	@And("^User verify Open reviews Export.")
+	  	public void verifyOpenReview() throws InterruptedException
+	  	{
+	  		surv.verifyOpenReview();
+	  	}
+	  	
+	 	@And("^User verify Comment Export.")
+	 	public void verifyCommentExport() throws InterruptedException
+	 	{
+	 		surv.verifyCommentExport();
+	 	}
+	 	
+	 	@And("^User verify custom review export.")
+	 	public void verifyCustomReview() throws InterruptedException
+	 	{
+	 		surv.verifyCustomReview();
+	 	}
+	 	
+	 	@Then("^ User verify Trade Desk Export.")
+	 	public void verifyTradeDesk() throws InterruptedException
+	 	{
+	 		surv.verifyTradeDesk();
+	 	}
+	 
+	 	@Then("^ User Verify Open Firm ID.")
+	 	public void verifyOpenFirmID() throws InterruptedException
+	 	{
+	 		surv.verifyOpenFirmID();
+	 	}
+	 	
+	  
+	 	
+	 	@And("^User verify Review Month")
+	 	public void verifyReviewMonth1() throws InterruptedException
+	 	{
+	 		surv.verifyReviewMonth();
+	 	}
+	 	
+	 	@And("^User verify Triggered date.")
+	 	public void verifyTriggeredDtae() throws InterruptedException
+	 	{
+	 		surv.verifyTriggeredDate();
+	 	}
+	 	
+	 
+	 	@Then("^User verify Review Year.")
+	 	public void verifyReviewYear1() throws InterruptedException
+	 	{
+	 		surv.verifyReviewYear();
+	 	}
+	 	
+	 	@Then("^User Verify Mutual Fund Waivers.")
+	 	public void verifyMutualFundWaivers() throws InterruptedException
+	 	{
+	 		surv.verifyMutualFundWaivers();
+	 	}
+	  	
+	 	@And("^User verify Fund Family.")
+	  	public void verifyFundFamily() throws InterruptedException
+	  	{
+	  		surv.verifyFundFamily();
+	  	}
+	 	
+	 	@And("^User verify Fund Name.")
+	 	public void verifyFundName() throws InterruptedException
+	 	{
+	 		surv.verifyFundName();
+	 	}
+	 	
+	 	@And("^User verify Share Class.")
+	 	public void verifyShareClass() throws InterruptedException
+	 	{
+	 		surv.verifyShareClass();
+	 	}
+	 	
+	 	@And("^User verify Waiver Eligible.")
+	 	public void verifyWaiverEligible() throws InterruptedException
+	 	{
+	 		surv.WaiverEligible();
+	 	}
+	 	
+	 	@And("^User verify A SHare EQ.")
+	 	public void verifyASHareEQ() throws InterruptedException
+	 	{
+	 		surv.verifyASHareEQ();
+	 	}
+	 	
+	 	@Then("^User verify Symbol.")
+	 	public void verifySymbol1() throws InterruptedException
+	 	{
+	 		surv.verifySymbol();
+	 	}
+	 	
+	 	@Then("^User Firm Restricted Securities.")
+	 	public void verifyFirmRestrictedSecurity() throws InterruptedException
+	 	{
+	 		surv.verifyFirmRestrictedSecuritytab();
+	 	}
+	 	
+	  	@And("^User verify cusip number.")
+	  	public void verifycusipNumber() throws InterruptedException
+	  	{
+	  		surv.verifyCusipNumber();
+	  	}
+	  	
+	 	@And("^And User verify symbol.")
+	 	public void verifySymbol() throws InterruptedException
+	 	{
+	 		surv.verifySymbol();
+	 	}
+	 	
+	 	@And("^User verify Product type.")
+	 	public void verifyProductType() throws InterruptedException
+	 	{
+	 		surv.ProductType();
+	 	}
+	 	
+	 	
+	 	
+	 	@And("^User verify Restriction status.")
+	 	public void verifyRestrictionStatus() throws InterruptedException
+	 	{
+	 		surv.verifyRestrictionStatus();
+	 	}
+	 	
+	 	@Then("^User verify New tab.")
+	 	public void verifyNewTab() throws InterruptedException
+	 	{
+	 		surv.verifyNewTab();
+	 	}
+	 	
+	 	@Then("^User verify Request Category.")
+	 	public void verifyRequestCategory() throws InterruptedException
+	 	{
+	 		surv.verifyRequestCategory();
+	 	}
+	 	
+	  	@And("^User verify Request File Name.")
+	  	public void verifyRequestFileName() throws InterruptedException
+	  	{
+	  		surv.verifyRequestFileName();
+	  	}
+	 	
+	  	@And("^User verify created by. ")
+	  	public void verifyCreatedBy() throws InterruptedException
+	  	{
+	  		surv.verifyCreatedBy();
+	  	}
+	 	@And("^User verify created date.")
+	 	public void verifyCreatedDate() throws InterruptedException
+	 	{
+	 		surv.verifyCreatedDate();
+	 	}
+	 	
+	 	@Then("^User verify Firm.")
+	 	public void verifyFirm() throws InterruptedException
+	 	{
+	 		surv.verifyFirm();
+	 	}
+	 	
+	  	@And("^User verify Review Type. ")
+	  	public void verifyReviewType() throws InterruptedException
+	  	{
+	  		surv.verifyReviewType();
+	  	}
+	  	
+	  	
+	 	
+	  	@And("^User verify Review Month.")
+	  	public void verifyReviewMonth() throws InterruptedException
+	  	{
+	  		surv.verifyReviewMonth();
+	  	}
+	  	
+	 	@And("^User verify review count.")
+	 	public void verifyReviewCount() throws InterruptedException
+	 	{
+	 		surv.verifyReviewCount();
+	 	}
+	 	
+	 
+	 	
+	 	@And("^User verify to review status.")
+	 	public void verifyReviewStatus() throws InterruptedException
+	 	{
+	 		surv.verifyReviewStatus();
+	 	}
+	 	
+	 	@And("^User verify triggered date.")
+	 	public void verifyTriggeredDate() throws InterruptedException
+	 	{
+	 		surv.verifyTriggeredDate();
+	 	}
+	 	
+	 	@And("^User verify triggered by.")
+	 	public void verifyTriggeredBy() throws InterruptedException
+	 	{
+	 		surv.verifyTriggeredDate();
+	 	}
+	 	
+	 	@And("^Then user verify Add New tab.")
+	 	public void verifyAddNewTab() throws InterruptedException
+	 	{
+	 		surv.verifyAddNewTab();
+	 	}
+	 	
+//		@And("^User verify Count and profile display in tabular format.")
+//		public void verifyCountAndProfileDisplay() throws InterruptedException
+//		{
+//			surv.verifyCountAndProfileDisplay();
+//		}
+		
+		@Then("^ User verify Dropdown Profile number with search functions.")
+		public void verifyProfileNumberDropdownWithSearchFunction() throws InterruptedException
+		{
+			surv.verifyProfileNumberDropdownWithSearchFunction();
+		}
+		
+	 	@And("^User verify Open profile with profile details display on click.")
+	 	public void verifyOpenProfile() throws InterruptedException
+	 	{
+	 		surv.verifyOpenProfile();
+	 	}
+	
+		@And("^User verify All with profile details display on click.")
+	 	public void verifyAll() throws InterruptedException
+	 	{
+	 		surv.notifyAll();
+	 	}
+	
+	 	/*@And("^User Download excel and Pagination with traversing last record and backwards.")
+	 	public void verifyDownloadButtonOnClick() throws InterruptedException
+	 	{
+	 		surv.verifyDownloadButtonOnClick();
+	 	}
+	 	
+	 	@And("^ User verify Iterations of 200 review records.")
+	 	public void verifyRecordIterations() throws InterruptedException
+	 	{
+	 		surv.verifyRecordIterations();
+	 	}
+	 	
+	 	@And("^ User verify Excel download with single(Rep partial name) and multiple filter(Options review)")
+	 	public void verifyExcelDownloadWIthSingleAndMultipleFilter() throws InterruptedException
+	 	{
+	 		surv.verifyExcelDownloadWIthSingleAndMultipleFilter();
+	 	}
+	 	
+	 	@And("^User verify Data export >> 5 review types excel download ")
+	 	public void verifyDataExport() throws InterruptedException
+	 	{
+	 		surv.verifyDataExport();
+	 	}
+	 	
+	  	@And("^User Verify the count of review types with excel download  and account details for Turnover quity COE,Commision Matching FIA,Commision Matching VA,MF break point,MF waiver  review types  from UI.")
+	  	public void verifyreviewTypesCount() throws InterruptedException
+	  	{
+	  		surv.verifyReviewCount();
+	  	}
+	  	
+	  	@And("^User Verify Client on the case and client in Household Account and Mutual fund transaction section in the details window is  matching.")
+	  	public void verifyMutualFundTransaction() throws InterruptedException
+	  	{
+	  		surv.verifyMutualFundTransaction();
+	  	
+	  	}
+	  	
+	  	@And("^User verify data in exported file matches  the FP name and FP code in data file.")
+	  	public void verifyDataExportFile() throws InterruptedException
+	  	{
+	  		surv.verifyDataExport();
+	  	}
+	  	
+	  	
+	  	@And("^User verify the review dates are  reported correctly when applied the filter for options review type.")
+	  	public void verifyReviewDates() throws InterruptedException
+	  	{
+	  		surv.verifyReviewDates();
+	  	}
+	  	
+	  	@And("^User Verify the review period in options uncovered is  showing the previous week’s and  future week’s review period dates appropriately.")
+	  	public void verifyReviewPeriod() throws InterruptedException
+	  	{
+	  		surv.verifyReviewPeriod();
+	  	}
+	  	
+	  	@And("^User is Checking the indexing of the number of records showing per page (try with 5, 10, 20, 30). For 30 records it was showing the blank page. ")
+	  	public void verifyIndexingforReccordsPerPage() throws InterruptedException
+	  	{
+	  		surv.verifyIndexingforReccordsPerPage();
+	  	}
+	  	
+	  	@And("^User is Checking whether the review info, review comments, etc., can be edited and saved. ")
+	  	public void verifyReviewInfoReviewComment() throws InterruptedException
+	  	{
+	  		surv.verifyReviewInfoReviewComment();
+	  	}
+	  	@And("^User Check whether the trends info can be edited and saved.")
+	  	public void verifyTrendsInfo() throws InterruptedException
+	  	{
+	  		surv.verifyTrendsInfo();
+	  	}
+	  	@Then("^User Check whether the user able to edit the profile info in the profile details section.")
+	  	public void verifyProfileDetails() throws InterruptedException
+	  	{
+	  		surv.verifyProfileDetails();
+	  	}*/
+    
+	

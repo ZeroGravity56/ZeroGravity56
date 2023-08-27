@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="45291" started-at="2023-08-25T09:49:45Z" finished-at="2023-08-25T09:50:31Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:testrunner.TestRunner@3414a8c3]" name="feature" class="testrunner.TestRunner"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="45291" started-at="2023-08-25T09:49:45Z" finished-at="2023-08-25T09:50:31Z">
+      <class name="testrunner.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:testrunner.TestRunner@3414a8c3]" name="setUpClass" is-config="true" duration-ms="2023" started-at="2023-08-25T15:19:45Z" finished-at="2023-08-25T15:19:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:testrunner.TestRunner@3414a8c3]" name="feature" duration-ms="42763" started-at="2023-08-25T15:19:48Z" description="Runs cucmber Features" data-provider="features" finished-at="2023-08-25T15:20:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Survaeillance_FO_QA]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="testDownClass()[pri:0, instance:testrunner.TestRunner@3414a8c3]" name="testDownClass" is-config="true" duration-ms="5" started-at="2023-08-25T15:20:31Z" finished-at="2023-08-25T15:20:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDownClass -->
+      </class> <!-- testrunner.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

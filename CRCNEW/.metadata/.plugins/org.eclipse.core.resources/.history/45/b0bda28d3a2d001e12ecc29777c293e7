@@ -1,0 +1,77 @@
+Feature: Survaeillance_FO_QA
+  In order to access CRC for Advisor Portal
+  As an Advisor
+  I want to validate all flows in CRC for Advisor Portal
+#10942564, 60605850, 10343619
+
+  	@BO_QA_700
+  	Scenario: TC0030_BO_QA-Verify Survaeillance Link.
+  	Given Login to AP
+  	When User navigates to Surveillance
+  	
+  	@BO_QA @160
+  	Scenario: TC001_BO_QA-Verify Homepage 
+  	Given Login to AP
+  	When User navigates to Surveillance
+  	And User Verify Homepage for LHS sub menu items with expand and collapse function. 
+  	Then User Verify Dropdown Account number,Review Name,Client Number,Rep Code with search functions.
+  	And User verify Open review, my review, my draft and All with review details display on click.
+ 	And User verify Functionality of +New, Import and Clear All
+ 	And User Download excel and Pagination with traversing last record and backwards.
+ 	
+ 	@BO_QA @162
+  	Scenario: TC001_BO_QA-Verify Data Export Page 
+  	Given Login to AP
+  	When User navigates to Surveillance
+  	And User Verify Homepage for LHS sub menu items with expand and collapse function. 
+  	Then User Verify Review Name.
+  	And User verify Open reviews Export.
+ 	And User verify Comment Export.
+ 	And User verify custom review export.
+ 	Then User verify Trade Desk Export.
+ 	
+  @BO_QA @163
+  	Scenario: TC001_BO_QA-Verify Profile Page 
+  	Given Login to AP
+  	When User navigates to Surveillance
+  	And User Verify Homepage for LHS sub menu items with expand and collapse function. 
+  	Then User Verify Open Profile.
+  	And User verify My Profile.
+ 	Then User verify All.
+ 	
+ 	@BO_QA @163
+  	Scenario: TC001_BO_QA-Verify Notification History. 
+  	Given Login to AP
+  	When User navigates to Surveillance
+  	And User Verify Homepage for LHS sub menu items with expand and collapse function. 
+  	Then User Verify Open Firm ID.
+  	And User verify Review Type.
+ 	And User verify Review Year.
+ 	And User verify Review Month
+ 	And User verify Triggered date.
+ 	And User verify Triggered by.	
+ 	Then User verify Review Year.
+ 	
+  @BO_QA @230
+  	Scenario: TC001_BO_QA-Verify Financial Profile Page 
+  	Given Login to AP
+  	When User navigates to Surveillance
+  	And User verify Count and profile display in tabular format.
+  	Then User verify Dropdown Profile number with search functions.
+ 	And User verify Open profile, my profile and All with profile details display on click.
+ 	And User verify Functionality of +New and Clear All
+ 	And User Download excel and Pagination with traversing last record and backwards.
+ 	And User verify Iterations of 200 review records 
+ 	And User verify Excel download with single(Rep partial name) and multiple filter(Options review)
+ 	And User verify Data export >> 5 review types excel download 
+  	And User Verify the count of review types with excel download  and account details for Turnover quity COE,Commision Matching FIA,Commision Matching VA,MF break point,MF waiver  review types  from UI.
+  	And User Verify the Rep number does  match the rep name in UI and downloaded excel.
+  	And User Verify Client on the case and client in Household Account and Mutual fund transaction section in the details window is  matching. 
+  	And User verify data in exported file matches  the FP name and FP code in data file. 
+  	And User verify the review dates are  reported correctly when applied the filter for options review type. 
+  	And User Verify the review period in options uncovered is  showing the previous week’s and  future week’s review period dates appropriately.
+  	And User is Checking the indexing of the number of records showing per page (try with 5, 10, 20, 30). For 30 records it was showing the blank page. 
+  	And User is Checking whether the review info, review comments, etc., can be edited and saved. 
+  	And User Check whether the trends info can be edited and saved.
+  	Then User Check whether the user able to edit the profile info in the profile details section. 
+  	

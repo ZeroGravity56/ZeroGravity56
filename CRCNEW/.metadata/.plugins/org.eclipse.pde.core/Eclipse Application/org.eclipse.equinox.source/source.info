@@ -1,0 +1,8 @@
+#encoding=UTF-8
+#version=1
+com.beust.jcommander.source,1.72.0,file:/W:/MphasisQA/Rajkamal/EclipsePhoton/eclipse/plugins/com.beust.jcommander.source_1.72.0.jar,-1,false
+org.apache-extras.beanshell.bsh.source,2.0.0.b6,file:/W:/MphasisQA/Rajkamal/EclipsePhoton/eclipse/plugins/org.apache-extras.beanshell.bsh.source_2.0.0.b6.jar,-1,false
+org.scala-ide.zinc.compiler.bridge.source,1.0.0.v-201801021322-2dfe808,file:/W:/MphasisQA/Rajkamal/EclipsePhoton/eclipse/plugins/org.scala-ide.zinc.compiler.bridge.source_1.0.0.v-201801021322-2dfe808.jar,-1,false
+org.scala-ide.zinc.compiler.bridge.source_2.10,1.0.0.v-201801021322-2dfe808,file:/W:/MphasisQA/Rajkamal/EclipsePhoton/eclipse/plugins/org.scala-ide.zinc.compiler.bridge.source_2.10_1.0.0.v-201801021322-2dfe808.jar,-1,false
+org.testng.source,6.14.3.r201802240500,file:/W:/MphasisQA/Rajkamal/EclipsePhoton/eclipse/plugins/org.testng.source_6.14.3.r201802240500.jar,-1,false
+org.yaml.snakeyaml.source,1.17.0,file:/W:/MphasisQA/Rajkamal/EclipsePhoton/eclipse/plugins/org.yaml.snakeyaml.source_1.17.0.jar,-1,false

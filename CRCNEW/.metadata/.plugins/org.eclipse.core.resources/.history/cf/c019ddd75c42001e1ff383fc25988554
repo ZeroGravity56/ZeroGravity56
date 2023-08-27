@@ -1,0 +1,162 @@
+    package steps;
+
+    import static org.hamcrest.MatcherAssert.assertThat;
+
+    import java.io.IOException;
+    import java.text.ParseException;
+    import java.text.SimpleDateFormat;
+    import java.util.Date;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+    import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+
+import pageobjects.Survaellience;
+import pageobjects.ReviewNumber;
+
+    import utils.TU;
+
+
+    public class ReviewNumberSteps extends ReviewNumber{
+    	
+    	SimpleDateFormat dt, dt1;
+    	long startTime;
+        TU tu;
+        String fromDt, toDt, Cdt;
+        int i, itemsSize, textsSize, pieItemsSize, advSize;
+		private WebElement FirmId;
+		
+        
+        public ReviewNumberSteps(){
+    		super(driver);
+    		tu = new TU();
+    	}
+
+        
+
+
+        public void navigateToBackOffice2() throws InterruptedException {
+    		// TODO Auto-generated method stub
+    		 tu.webAppObject(driver, backOfficeLink2 , "click", "", 1, "SA", "navigateToBackOffice", 1);
+    			
+    	}
+
+
+        public void navigateToSurveillancelink() throws InterruptedException {
+    		// TODO Auto-generated method stub
+        	 tu.webAppObject(driver, SurvaeillenceLink4 , "click", "", 1, "SA", "navigateToSurvaeillanceLink", 1);
+        	 Thread.sleep(4000);
+        	 tu.switchToWindowByTitle("Surveillance Automation");
+        	 
+    	}
+        
+        
+	 public void clickOnHomeTab() throws InterruptedException
+	 {
+		 System.out.println("entered");
+		 Thread.sleep(1000);
+		 System.out.println(HomeTab2.isDisplayed());
+		 tu.webAppObject(driver, HomeTab2, "click", "", 1, "SA", "HomeTab2", 1);
+		 Thread.sleep(1000);
+
+	 }
+	
+	 public void ReviewNumberDropdown() throws InterruptedException
+		{
+		 
+		//	tu.webAppObject(driver, ReviewNumberDropdown1 , "selectByVisibleText", " Review Number", 1, "SA", "ReviewNumberDropdown1", 1);
+		 Thread.sleep(1000);
+		 arrowBtn.click();
+			tu.webAppObject(driver, ReviewNumberDropdown1 , "click", "", 1, "SA", "ReviewNumberDropdown1", 1);
+			 Thread.sleep(1000);
+			//Thread.sleep(1);
+	    }
+	 
+	 public void searchReviewNumber() throws InterruptedException {
+			// TODO Auto-generated method stub
+			 tu.webAppObject(driver, ReviewNumber1 , "click", "", 1, "SA", "searchReviewNumber", 1);
+			 
+			 tu.webAppObject(driver, ReviewNumber1 , "sendKeys", "SPF23938133", 1, "SA", "searchReviewNumber", 1);
+			 
+			 tu.webAppObject(driver, ReviewNumber1 , "sendKeys", " "+Keys.ENTER, 1, "SA", "searchReviewNumber", 1);
+			 
+		}
+		
+	 
+	 public void VerifyViewTab() throws InterruptedException
+	 {
+		 Thread.sleep(1000);
+		 const result = new ResultPage(ViewTab);
+		 await result.Royal Alliance();
+		 await page.waitForTimeout(5000);
+		 tu.webAppObject(driver, ViewTab, "click", "", 1, "SA", "ViewTab", 1);
+
+	 }
+
+
+		// String ExpectedTitle = "";
+	//	 Assert.assertEquals(ActualTitle, ExpectedTitle);
+			
+	}
+
+
+
+
+	/*public void clickOnLookUpPage() {
+		// TODO Auto-generated method stub
+		 tu.webAppObject(driver, LookUpPage , "click", "", 1, "SA", "LookUpPage", 1);
+
+	}
+
+
+
+
+	public void seletCategory() {
+		// TODO Auto-generated method stub
+		 tu.webAppObject(driver, Category , "click", "", 1, "SA", "Category", 1);
+
+	}
+
+
+
+
+	public void selectCategorySubscription() {
+		// TODO Auto-generated method stub
+		 tu.webAppObject(driver, Subscription , "click", "", 1, "SA", "Subscription", 1);
+
+	}
+
+
+
+
+	public void selectCreatedBy() {
+		// TODO Auto-generated method stub
+		 tu.webAppObject(driver, CreatedBy , "click", "", 1, "SA", "CreatedBy", 1);
+
+	}
+
+
+
+
+	public void clickOnUpdated() {
+		// TODO Auto-generated method stub
+		 tu.webAppObject(driver, Updated , "click", "", 1, "SA", "Updated", 1);
+
+	}
+
+
+
+
+	public void clickOnACtive() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+*/
+
+	 
+    

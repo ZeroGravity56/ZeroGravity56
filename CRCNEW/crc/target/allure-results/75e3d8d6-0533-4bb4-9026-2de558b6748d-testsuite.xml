@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1690447494358" stop="1690447587171" version="1.5.2" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>CRC_FO_QA</name>
+    <description type="text">In order to access CRC for Advisor Portal&#13;
+As an Advisor&#13;
+I want to validate all flows in CRC for Advisor Portal</description>
+    <test-cases>
+        <test-case start="1690447494359" stop="1690447515218" status="pending">
+            <name>TC002_FO_QA-Verify PreDefined Commission Reports</name>
+            <title>TC002_FO_QA-Verify PreDefined Commission Reports</title>
+            <description type="text"></description>
+            <failure>
+                <message>Unimplemented steps were found</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1690447495935" stop="1690447510396" status="passed">
+                    <name>Given Login to AP</name>
+                    <title>Given Login to AP</title>
+                </step>
+                <step start="1690447515218" stop="1690447515218" status="canceled">
+                    <name>User navigates to CRC</name>
+                    <title>User navigates to CRC</title>
+                </step>
+                <step start="1690447515218" stop="1690447515218" status="canceled">
+                    <name>Verify PreDefined Commission Reports</name>
+                    <title>Verify PreDefined Commission Reports</title>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="attachment10" source="f6074cec-88c4-4da8-adc4-ed5b56881882-attachment.png" type="image/png"/>
+            </attachments>
+            <labels>
+                <label name="story" value="TC002_FO_QA-Verify PreDefined Commission Reports"/>
+                <label name="feature" value="CRC_FO_QA"/>
+                <label name="host" value="pw1etsquas031bv"/>
+                <label name="thread" value="1188@pw1etsquas031bv.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1690447515219" stop="1690447532420" status="pending">
+            <name>TC003_FO_QA-Verify Commission Statements</name>
+            <title>TC003_FO_QA-Verify Commission Statements</title>
+            <description type="text"></description>
+            <failure>
+                <message>Unimplemented steps were found</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1690447516875" stop="1690447531367" status="passed">
+                    <name>Given Login to AP</name>
+                    <title>Given Login to AP</title>
+                </step>
+                <step start="1690447532420" stop="1690447532420" status="canceled">
+                    <name>User navigates to CRC</name>
+                    <title>User navigates to CRC</title>
+                </step>
+                <step start="1690447532420" stop="1690447532420" status="canceled">
+                    <name>Verify Commission Statements</name>
+                    <title>Verify Commission Statements</title>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="attachment11" source="21b53fc9-cd31-4ccc-a6c0-fd20aa2e7f6f-attachment.png" type="image/png"/>
+            </attachments>
+            <labels>
+                <label name="story" value="TC003_FO_QA-Verify Commission Statements"/>
+                <label name="feature" value="CRC_FO_QA"/>
+                <label name="host" value="pw1etsquas031bv"/>
+                <label name="thread" value="1188@pw1etsquas031bv.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1690447532421" stop="1690447551450" status="pending">
+            <name>TC004_FO_QA-Verify LOB Summary and PY LOB Summary</name>
+            <title>TC004_FO_QA-Verify LOB Summary and PY LOB Summary</title>
+            <description type="text"></description>
+            <failure>
+                <message>Unimplemented steps were found</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1690447534540" stop="1690447549240" status="passed">
+                    <name>Given Login to AP</name>
+                    <title>Given Login to AP</title>
+                </step>
+                <step start="1690447551450" stop="1690447551450" status="canceled">
+                    <name>User navigates to CRC</name>
+                    <title>User navigates to CRC</title>
+                </step>
+                <step start="1690447551450" stop="1690447551450" status="canceled">
+                    <name>User search valid rep code</name>
+                    <title>User search valid rep code</title>
+                </step>
+                <step start="1690447551450" stop="1690447551450" status="canceled">
+                    <name>Verify LOB Summary and PY LOB Summary</name>
+                    <title>Verify LOB Summary and PY LOB Summary</title>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="attachment12" source="3f42b37a-5edc-4d17-a3ef-64a5b86ea7a2-attachment.png" type="image/png"/>
+            </attachments>
+            <labels>
+                <label name="story" value="TC004_FO_QA-Verify LOB Summary and PY LOB Summary"/>
+                <label name="feature" value="CRC_FO_QA"/>
+                <label name="host" value="pw1etsquas031bv"/>
+                <label name="thread" value="1188@pw1etsquas031bv.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1690447551451" stop="1690447569602" status="pending">
+            <name>TC005_FO_QA-Verify PreDefined Commission Reports</name>
+            <title>TC005_FO_QA-Verify PreDefined Commission Reports</title>
+            <description type="text"></description>
+            <failure>
+                <message>Unimplemented steps were found</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1690447553017" stop="1690447567643" status="passed">
+                    <name>Given Login to AP</name>
+                    <title>Given Login to AP</title>
+                </step>
+                <step start="1690447569602" stop="1690447569602" status="canceled">
+                    <name>User navigates to CRC</name>
+                    <title>User navigates to CRC</title>
+                </step>
+                <step start="1690447569602" stop="1690447569602" status="canceled">
+                    <name>User search valid rep code</name>
+                    <title>User search valid rep code</title>
+                </step>
+                <step start="1690447569602" stop="1690447569602" status="canceled">
+                    <name>Verify PreDefined Commission Reports</name>
+                    <title>Verify PreDefined Commission Reports</title>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="attachment13" source="e67d373f-ba40-43ad-aec4-6fffa507ac42-attachment.png" type="image/png"/>
+            </attachments>
+            <labels>
+                <label name="story" value="TC005_FO_QA-Verify PreDefined Commission Reports"/>
+                <label name="feature" value="CRC_FO_QA"/>
+                <label name="host" value="pw1etsquas031bv"/>
+                <label name="thread" value="1188@pw1etsquas031bv.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1690447569603" stop="1690447587171" status="pending">
+            <name>TC006_FO_QA-Verify Commission Statements</name>
+            <title>TC006_FO_QA-Verify Commission Statements</title>
+            <description type="text"></description>
+            <failure>
+                <message>Unimplemented steps were found</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1690447571146" stop="1690447585840" status="passed">
+                    <name>Given Login to AP</name>
+                    <title>Given Login to AP</title>
+                </step>
+                <step start="1690447587171" stop="1690447587171" status="canceled">
+                    <name>User navigates to CRC</name>
+                    <title>User navigates to CRC</title>
+                </step>
+                <step start="1690447587171" stop="1690447587171" status="canceled">
+                    <name>User search valid rep code</name>
+                    <title>User search valid rep code</title>
+                </step>
+                <step start="1690447587171" stop="1690447587171" status="canceled">
+                    <name>Verify Commission Statements</name>
+                    <title>Verify Commission Statements</title>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="attachment14" source="69b1a270-41ed-47ea-9e74-a0635e49ff56-attachment.png" type="image/png"/>
+            </attachments>
+            <labels>
+                <label name="story" value="TC006_FO_QA-Verify Commission Statements"/>
+                <label name="feature" value="CRC_FO_QA"/>
+                <label name="host" value="pw1etsquas031bv"/>
+                <label name="thread" value="1188@pw1etsquas031bv.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="feature" value="CRC_FO_QA"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="clickOnHomeTab" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="clickOnHomeTab"/>
+			<item value="dropdown"/>
+			<item value="User Download excel and Pagination with traversing last record and backwards."/>
+			<item value="downloadExcelPagination()"/>
+			<item value="verifyDownloadButtonOnClick()"/>
+			<item value="User verify All tab with review details display on click."/>
+			<item value="User verify All tab with review details display on click"/>
+			<item value="User verify my draft with review details display on click."/>
+			<item value="User verify my review with review details display on click."/>
+			<item value="User verify Open review, my review, my draft and All with review details display on click."/>
+			<item value="User Verify Dropdown Account number,Review Number,Client Number,Rep Code with search functions."/>
+			<item value="User Verify Homepage for LHS sub menu items with expand and collapse function."/>
+			<item value="User navigates to Surveillance"/>
+			<item value="Login to AP"/>
+			<item value="veryfydownloadbuutonclick"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="284" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="391" key="DIALOG_HEIGHT"/>
+		<item value="954" key="DIALOG_X_ORIGIN"/>
+		<item value="325" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

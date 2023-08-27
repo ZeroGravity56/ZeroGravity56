@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1690447454212" stop="1690447492556" version="1.5.2" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>CRC_BO_QA</name>
+    <description type="text">In order to access CRC for Advisor Portal&#13;
+As an Advisor&#13;
+I want to validate all flows in CRC for Advisor Portal</description>
+    <test-cases>
+        <test-case start="1690447454249" stop="1690447466924" status="pending">
+            <name>TC002_BO_QA-Verify PreDefined Commission Reports</name>
+            <title>TC002_BO_QA-Verify PreDefined Commission Reports</title>
+            <description type="text"></description>
+            <failure>
+                <message>Unimplemented steps were found</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1690447459608" stop="1690447464175" status="passed">
+                    <name>Given Login to AP</name>
+                    <title>Given Login to AP</title>
+                </step>
+                <step start="1690447466907" stop="1690447466918" status="canceled">
+                    <name>User navigates to CRC</name>
+                    <title>User navigates to CRC</title>
+                </step>
+                <step start="1690447466923" stop="1690447466923" status="canceled">
+                    <name>Verify PreDefined Commission Reports</name>
+                    <title>Verify PreDefined Commission Reports</title>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="attachment0" source="04619886-eef4-4d9a-889b-906f7210810f-attachment.png" type="image/png"/>
+            </attachments>
+            <labels>
+                <label name="story" value="TC002_BO_QA-Verify PreDefined Commission Reports"/>
+                <label name="feature" value="CRC_BO_QA"/>
+                <label name="host" value="pw1etsquas031bv"/>
+                <label name="thread" value="1188@pw1etsquas031bv.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1690447466925" stop="1690447470582" status="pending">
+            <name>TC003_BO_QA-Verify Commission Statements</name>
+            <title>TC003_BO_QA-Verify Commission Statements</title>
+            <description type="text"></description>
+            <failure>
+                <message>Unimplemented steps were found</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1690447468467" stop="1690447469343" status="passed">
+                    <name>Given Login to AP</name>
+                    <title>Given Login to AP</title>
+                </step>
+                <step start="1690447470582" stop="1690447470582" status="canceled">
+                    <name>User navigates to CRC</name>
+                    <title>User navigates to CRC</title>
+                </step>
+                <step start="1690447470582" stop="1690447470582" status="canceled">
+                    <name>Verify Commission Statements</name>
+                    <title>Verify Commission Statements</title>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="attachment1" source="02dc3e1e-9456-43cf-86e4-ca5aa5b56435-attachment.png" type="image/png"/>
+            </attachments>
+            <labels>
+                <label name="story" value="TC003_BO_QA-Verify Commission Statements"/>
+                <label name="feature" value="CRC_BO_QA"/>
+                <label name="host" value="pw1etsquas031bv"/>
+                <label name="thread" value="1188@pw1etsquas031bv.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1690447470583" stop="1690447475306" status="pending">
+            <name>TC004_BO_QA-Verify LOB Summary and PY LOB Summary</name>
+            <title>TC004_BO_QA-Verify LOB Summary and PY LOB Summary</title>
+            <description type="text"></description>
+            <failure>
+                <message>Unimplemented steps were found</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1690447472196" stop="1690447474142" status="passed">
+                    <name>Given Login to AP</name>
+                    <title>Given Login to AP</title>
+                </step>
+                <step start="1690447475306" stop="1690447475306" status="canceled">
+                    <name>User navigates to CRC</name>
+                    <title>User navigates to CRC</title>
+                </step>
+                <step start="1690447475306" stop="1690447475306" status="canceled">
+                    <name>User search valid rep code</name>
+                    <title>User search valid rep code</title>
+                </step>
+                <step start="1690447475306" stop="1690447475306" status="canceled">
+                    <name>Verify LOB Summary and PY LOB Summary</name>
+                    <title>Verify LOB Summary and PY LOB Summary</title>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="attachment2" source="64fea927-e1df-4163-9c4b-98832fa6784f-attachment.png" type="image/png"/>
+            </attachments>
+            <labels>
+                <label name="story" value="TC004_BO_QA-Verify LOB Summary and PY LOB Summary"/>
+                <label name="feature" value="CRC_BO_QA"/>
+                <label name="host" value="pw1etsquas031bv"/>
+                <label name="thread" value="1188@pw1etsquas031bv.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1690447475307" stop="1690447478973" status="pending">
+            <name>TC005_BO_QA-Verify PreDefined Commission Reports</name>
+            <title>TC005_BO_QA-Verify PreDefined Commission Reports</title>
+            <description type="text"></description>
+            <failure>
+                <message>Unimplemented steps were found</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1690447476983" stop="1690447477831" status="passed">
+                    <name>Given Login to AP</name>
+                    <title>Given Login to AP</title>
+                </step>
+                <step start="1690447478973" stop="1690447478973" status="canceled">
+                    <name>User navigates to CRC</name>
+                    <title>User navigates to CRC</title>
+                </step>
+                <step start="1690447478973" stop="1690447478973" status="canceled">
+                    <name>Verify PreDefined Commission Reports</name>
+                    <title>Verify PreDefined Commission Reports</title>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="attachment3" source="21d9dd43-d16f-4b2a-869d-45eda3c4d858-attachment.png" type="image/png"/>
+            </attachments>
+            <labels>
+                <label name="story" value="TC005_BO_QA-Verify PreDefined Commission Reports"/>
+                <label name="feature" value="CRC_BO_QA"/>
+                <label name="host" value="pw1etsquas031bv"/>
+                <label name="thread" value="1188@pw1etsquas031bv.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1690447478974" stop="1690447482337" status="pending">
+            <name>TC006_BO_QA-Verify Commission Statements</name>
+            <title>TC006_BO_QA-Verify Commission Statements</title>
+            <description type="text"></description>
+            <failure>
+                <message>Unimplemented steps were found</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1690447480505" stop="1690447481269" status="passed">
+                    <name>Given Login to AP</name>
+                    <title>Given Login to AP</title>
+                </step>
+                <step start="1690447482337" stop="1690447482337" status="canceled">
+                    <name>User navigates to CRC</name>
+                    <title>User navigates to CRC</title>
+                </step>
+                <step start="1690447482337" stop="1690447482337" status="canceled">
+                    <name>Verify Commission Statements</name>
+                    <title>Verify Commission Statements</title>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="attachment4" source="6017fd18-e061-4b4d-b69f-cb60b9f77dfd-attachment.png" type="image/png"/>
+            </attachments>
+            <labels>
+                <label name="story" value="TC006_BO_QA-Verify Commission Statements"/>
+                <label name="feature" value="CRC_BO_QA"/>
+                <label name="host" value="pw1etsquas031bv"/>
+                <label name="thread" value="1188@pw1etsquas031bv.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1690447482338" stop="1690447484287" status="pending">
+            <name>TC007_BO_QA-Verify The User Able to Select Valid Dates Under Date selection</name>
+            <title>TC007_BO_QA-Verify The User Able to Select Valid Dates Under Date selection</title>
+            <description type="text"></description>
+            <failure>
+                <message>Unimplemented steps were found</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1690447483926" stop="1690447484003" status="broken">
+                    <name>Given Login to AP</name>
+                    <title>Given Login to AP</title>
+                </step>
+                <step start="1690447484287" stop="1690447484287" status="canceled">
+                    <name>User navigates to CRC</name>
+                    <title>User navigates to CRC</title>
+                </step>
+                <step start="1690447484287" stop="1690447484287" status="canceled">
+                    <name>User search valid rep code</name>
+                    <title>User search valid rep code</title>
+                </step>
+                <step start="1690447484287" stop="1690447484287" status="canceled">
+                    <name>User select valid dates under date selection</name>
+                    <title>User select valid dates under date selection</title>
+                </step>
+                <step start="1690447484287" stop="1690447484287" status="canceled">
+                    <name>verify the user able to see LOB Summary and PY LOB Summary</name>
+                    <title>verify the user able to see LOB Summary and PY LOB Summary</title>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="attachment5" source="a36c09a9-e9ed-4748-bfd4-3c5b83d41a67-attachment.png" type="image/png"/>
+            </attachments>
+            <labels>
+                <label name="story" value="TC007_BO_QA-Verify The User Able to Select Valid Dates Under Date selection"/>
+                <label name="feature" value="CRC_BO_QA"/>
+                <label name="host" value="pw1etsquas031bv"/>
+                <label name="thread" value="1188@pw1etsquas031bv.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1690447484287" stop="1690447486247" status="pending">
+            <name>TC008_BO_QA-Verify The User Able to Open Commission History Payment Amount</name>
+            <title>TC008_BO_QA-Verify The User Able to Open Commission History Payment Amount</title>
+            <description type="text"></description>
+            <failure>
+                <message>Unimplemented steps were found</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1690447485889" stop="1690447485958" status="broken">
+                    <name>Given Login to AP</name>
+                    <title>Given Login to AP</title>
+                </step>
+                <step start="1690447486247" stop="1690447486247" status="canceled">
+                    <name>User navigates to CRC</name>
+                    <title>User navigates to CRC</title>
+                </step>
+                <step start="1690447486247" stop="1690447486247" status="canceled">
+                    <name>User search valid rep code</name>
+                    <title>User search valid rep code</title>
+                </step>
+                <step start="1690447486247" stop="1690447486247" status="canceled">
+                    <name>User select valid dates under date selection</name>
+                    <title>User select valid dates under date selection</title>
+                </step>
+                <step start="1690447486247" stop="1690447486247" status="canceled">
+                    <name>verify commission history payment amount</name>
+                    <title>verify commission history payment amount</title>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="attachment6" source="4f642e54-5a7f-45a8-9468-96ad7d69fbbf-attachment.png" type="image/png"/>
+            </attachments>
+            <labels>
+                <label name="story" value="TC008_BO_QA-Verify The User Able to Open Commission History Payment Amount"/>
+                <label name="feature" value="CRC_BO_QA"/>
+                <label name="host" value="pw1etsquas031bv"/>
+                <label name="thread" value="1188@pw1etsquas031bv.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1690447486247" stop="1690447488423" status="pending">
+            <name>TC009_BO_QA-Verify The User Able to Open Balance Forward Amount Link under In Progress Table</name>
+            <title>TC009_BO_QA-Verify The User Able to Open Balance Forward Amount Link under In Progress Table</title>
+            <description type="text"></description>
+            <failure>
+                <message>Unimplemented steps were found</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1690447487998" stop="1690447488093" status="broken">
+                    <name>Given Login to AP</name>
+                    <title>Given Login to AP</title>
+                </step>
+                <step start="1690447488423" stop="1690447488423" status="canceled">
+                    <name>User navigates to CRC</name>
+                    <title>User navigates to CRC</title>
+                </step>
+                <step start="1690447488423" stop="1690447488423" status="canceled">
+                    <name>User search valid rep code</name>
+                    <title>User search valid rep code</title>
+                </step>
+                <step start="1690447488423" stop="1690447488423" status="canceled">
+                    <name>User select valid dates under date selection</name>
+                    <title>User select valid dates under date selection</title>
+                </step>
+                <step start="1690447488423" stop="1690447488423" status="canceled">
+                    <name>verify user able to open balance forward amount link</name>
+                    <title>verify user able to open balance forward amount link</title>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="attachment7" source="15c73838-bc1b-4137-b03a-0a20510f8a9d-attachment.png" type="image/png"/>
+            </attachments>
+            <labels>
+                <label name="story" value="TC009_BO_QA-Verify The User Able to Open Balance Forward Amount Link under In Progress Table"/>
+                <label name="feature" value="CRC_BO_QA"/>
+                <label name="host" value="pw1etsquas031bv"/>
+                <label name="thread" value="1188@pw1etsquas031bv.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1690447488424" stop="1690447490407" status="pending">
+            <name>TC010_BO_QA-Verify The Table Columns After Clicking Balance Forward Amount under In Progress Table</name>
+            <title>TC010_BO_QA-Verify The Table Columns After Clicking Balance Forward Amount under In Progress Table</title>
+            <description type="text"></description>
+            <failure>
+                <message>Unimplemented steps were found</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1690447490040" stop="1690447490089" status="broken">
+                    <name>Given Login to AP</name>
+                    <title>Given Login to AP</title>
+                </step>
+                <step start="1690447490407" stop="1690447490407" status="canceled">
+                    <name>User navigates to CRC</name>
+                    <title>User navigates to CRC</title>
+                </step>
+                <step start="1690447490407" stop="1690447490407" status="canceled">
+                    <name>User search valid rep code</name>
+                    <title>User search valid rep code</title>
+                </step>
+                <step start="1690447490407" stop="1690447490407" status="canceled">
+                    <name>User select valid dates under date selection</name>
+                    <title>User select valid dates under date selection</title>
+                </step>
+                <step start="1690447490407" stop="1690447490407" status="canceled">
+                    <name>verify the table is displayed after clicking balance forward amount</name>
+                    <title>verify the table is displayed after clicking balance forward amount</title>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="attachment8" source="d7143327-b506-4206-8bd5-af1d3ac5bb68-attachment.png" type="image/png"/>
+            </attachments>
+            <labels>
+                <label name="story" value="TC010_BO_QA-Verify The Table Columns After Clicking Balance Forward Amount under In Progress Table"/>
+                <label name="feature" value="CRC_BO_QA"/>
+                <label name="host" value="pw1etsquas031bv"/>
+                <label name="thread" value="1188@pw1etsquas031bv.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1690447490408" stop="1690447492545" status="pending">
+            <name>TC011_BO_QA-Verify The User Able to download excel Report in Balance Forward Amount Link under In Progress Table</name>
+            <title>TC011_BO_QA-Verify The User Able to download excel Report in Balance Forward Amount Link under In Progress Table</title>
+            <description type="text"></description>
+            <failure>
+                <message>Unimplemented steps were found</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1690447491979" stop="1690447492037" status="broken">
+                    <name>Given Login to AP</name>
+                    <title>Given Login to AP</title>
+                </step>
+                <step start="1690447492545" stop="1690447492545" status="canceled">
+                    <name>User navigates to CRC</name>
+                    <title>User navigates to CRC</title>
+                </step>
+                <step start="1690447492545" stop="1690447492545" status="canceled">
+                    <name>User search valid rep code</name>
+                    <title>User search valid rep code</title>
+                </step>
+                <step start="1690447492545" stop="1690447492545" status="canceled">
+                    <name>User select valid dates under date selection</name>
+                    <title>User select valid dates under date selection</title>
+                </step>
+                <step start="1690447492545" stop="1690447492545" status="canceled">
+                    <name>verify user able to download excel report</name>
+                    <title>verify user able to download excel report</title>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="attachment9" source="14eafbc9-e2fb-4c7f-a196-9717d610a459-attachment.png" type="image/png"/>
+            </attachments>
+            <labels>
+                <label name="story" value="TC011_BO_QA-Verify The User Able to download excel Report in Balance Forward Amount Link under In Progress Table"/>
+                <label name="feature" value="CRC_BO_QA"/>
+                <label name="host" value="pw1etsquas031bv"/>
+                <label name="thread" value="1188@pw1etsquas031bv.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="feature" value="CRC_BO_QA"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

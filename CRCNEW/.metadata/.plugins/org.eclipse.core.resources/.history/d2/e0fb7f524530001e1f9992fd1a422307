@@ -1,0 +1,108 @@
+package pageobjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import utils.TestBase;
+
+public class Survaellience extends TestBase {
+	
+	public Survaellience(WebDriver driver) {
+    	TestBase.driver=driver;
+		PageFactory.initElements(driver, this);
+		
+	}
+	
+		@FindBy(xpath="//a[text()='Surveillance']")
+	    public WebElement surveillanceLink;
+		
+		@FindBy(xpath="//span[text()='BackOffice']/parent::a")
+	    public WebElement backOfficeLink;
+		
+		@FindBy(xpath="//a[@title='Home']")
+	    public WebElement HomeTab;
+				
+		@FindBy(xpath="//*[@id='custom btndropdownSearch ng-tns-c180-9 ng-select ng-select-single ng-pristine ng-valid ng-select-bottom ng-touched']")
+		public WebElement AccountNumberDropdown;
+		
+		@FindBy(xpath="//*[@id='openReviews']")
+		public WebElement OpenReviewsDetailsPage;
+		
+		@FindBy(xpath="//*[@id='my-drafts']")
+		public WebElement MyDraftsDetailsPage;
+		
+		@FindBy(xpath="//*[@id='myreviews']")
+		public WebElement OpenMyReviewsDetailsPage;
+		
+		@FindBy(xpath="//*[@id='escalated']")
+		public WebElement OpenEscalatedDetailsPage;
+		
+		@FindBy(xpath="//*[@id='All']")
+		public WebElement OpenAllPage;
+	
+		@FindBy(id="New")
+	    public WebElement New;
+		
+		@FindBy(id="Import")
+	    public WebElement Import;
+		
+		@FindBy(id="Clear All")
+	    public WebElement ClearAll;
+		
+		@FindBy(xpath="//*[@class='page-item disabled']")
+		public WebElement downloadExcelPagination;
+		
+		@FindBy(xpath="//a[@title='Data Export']")
+	    public WebElement DataExportTab;
+		
+		@FindBy(xpath = "//*[contains(@class,'desktop-table__table-th-sort-button table_design')]/following::div/input[contains(@src,'Review Name')]")
+		public WebElement ReviewNameButton44;
+		
+		@FindBy(xpath = "//*[contains(@class,'desktop-table__table-th-sort-button table_design')]/following::div/input[contains(@src,'Open Reviews Export')]")
+		public WebElement OpenReviewsExportButton12;
+		
+		@FindBy(xpath = "//*[contains(@class,'class='desktop-table__table-th-sort-button table_design')]/following::div/input[contains(@src,'Comment Export')]")
+		public WebElement CommentExportButton31;
+	
+		@FindBy(xpath = "//*[contains(@class,'desktop-table__table-th-sort-button table_design')]/following::div/input[contains(@src,'Custom Review Export')]")
+		public WebElement CustomReviewExportButton41;
+		
+		@FindBy(xpath = "//*[contains(@class,'desktop-table__table-th-sort-button table_design')]/following::div/input[contains(@src,'Email Export')]")
+		public WebElement EmailExportExportButton51;
+		
+		@FindBy(xpath = "//*[contains(@class,'desktop-table__table-th-sort-button table_design')]/following::div/input[contains(@src,'Trade Desk Export')]")
+		public WebElement TradeDeskExportButton61;
+		
+		@FindBy(xpath="//a[@title='Profile']")
+	    public WebElement ProfileTab;
+		
+		@FindBy(xpath="//a[@title='Open Profile']")
+	    public WebElement OpenProfileTab;
+		
+		@FindBy(xpath="//a[@title='My Profile']")
+	    public WebElement MyProfileTab;
+		
+		@FindBy(xpath="//a[@title='All']")
+	    public WebElement AllTab;
+		
+		@FindBy(id="New")
+	    public WebElement New1;
+	
+		@FindBy(id="Clear All")
+	    public WebElement ClearAll1;
+	
+		@FindBy(xpath="//a[@title='Notification History']")
+	    public WebElement NotificationHistoryTab;
+		
+		@FindBy(xpath = "//*[contains(@class,'desktop-table__table-th-sort-button table_design')]/following::div/input[contains(@src,'Firm Id')]")
+		public WebElement FirmId1;
+		
+		@FindBy(xpath = "//*[contains(@class,'desktop-table__table-th-sort-button table_design')]/following::div/input[contains(@src,'Review Type')]")
+		public WebElement ReviewType;
+		
+		@FindBy(xpath = "//*[contains(@class,'desktop-table__table-th-sort-button table_design')]/following::div/input[contains(@src,'Review Year')]")
+		public WebElement ReviewYear;
+		
+    }

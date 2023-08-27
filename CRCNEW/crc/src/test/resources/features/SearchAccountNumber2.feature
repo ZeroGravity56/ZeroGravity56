@@ -1,0 +1,19 @@
+Feature: Survaeillance_FO_QA
+  In order to access Survaeillence for Advisor Portal
+  As an Advisor
+  I want to validate all flows in Survaeillence for Advisor Portal
+#10942564, 60605850, 10343619
+
+  	@BO_QA_210 @new1 @23
+  	Scenario: TC0030_BO_QA-Verify Survaeillance Link.
+  	Given Login to AP
+  	When User navigates to Backoffice 
+  	When User navigates to Surveillance
+  	And User is on Home Page
+  	And User Select the Account Number dropdown
+  	And User search the Account Number
+  	And User clicks on view tab.
+  	Then User navigates to Account Number Page.
+  	
+  	
+#  
